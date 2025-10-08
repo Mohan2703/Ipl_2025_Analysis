@@ -33,24 +33,21 @@ Fans, analysts, and team management often struggle to compare IPL players across
 
 Build a Squads Analytics Page in Power BI that:
 
-1. Data Integration from Multiple Sources
-- How can we efficiently collect, clean, and integrate IPL data from multiple sources -including API's,  web scraping (iplt20, ESPN cricinfo, Google), Kaggle, YouTube, GitHub, each with varying formats, structures, and data quality, to build a consistent and reliable Power BI model with accurately defined relationships?
+**1. Data Integration from Multiple Sources**
+- How can we efficiently collect, clean, and integrate IPL data from multiple sources -including API's,  web scraping (iplt20, ESPNcricinfo, Google), Kaggle, YouTube, GitHub, each with varying formats, structures, and data quality, to build a consistent and reliable Power BI model with accurately defined relationships?
 - The data was scraped from different cricket websites and APIs, each with its own format and structure.
 - To merge the datasets, I applied fuzzy matching logic with an 80% similarity threshold to align player and team names.
 - Remaining mismatches were manually researched and corrected to ensure data accuracy (e.g., resolving player name variations and missing records).
 
-2. Data Cleaning & Standardization
-
+**2. Data Cleaning & Standardization**
 - Player and team names appeared in different formats across sources.
 - Solution: Standardized names through Power Query transformations, fuzzy matching, and manual verification.
 
-3. Complex Data Modelling
-
+**3. Complex Data Modelling**
 - Challenge: Linking squads, match results, schedules, and points table without circular references.
 - Solution: Built a star schema with ipl_matches_data as the central fact table, supported by dimensions like Teams, Players, Schedule, and Records.
 
-4. Dynamic Filtering Across Pages
-
+**4. Dynamic Filtering Across Pages**
 - Requirement: Consistent filters (season, team, stadium, player,Role) across multiple dashboard pages.
 - Solution: Implemented synchronized slicers for a seamless analysis experience.
 - Displays full team squads with logos & player profiles.
@@ -58,7 +55,6 @@ Build a Squads Analytics Page in Power BI that:
 - Highlights captains, key performers, and role distribution.
 
 </details>
-
 
 ## Project Planning using Star Method
 <details>
@@ -89,7 +85,7 @@ Develop a Power BI dashboard page (Squads) that:
 - Designed interactive visuals: Player Cards, Bar Charts, Filters for Runs vs Innings (batting) and Wickets vs Innings (bowling).
 - Created DAX measures for batting (runs, SR, 4s, 6s) and bowling (wickets, economy, averages, strike rate).
 
-Designed Power BI visuals:
+**Designed Power BI visuals:**
 
 - Player Profile Cards (Batting + Bowling).
 - Captain  and Players Highlight Cards.
@@ -98,13 +94,13 @@ Designed Power BI visuals:
 
 ### 🏆 R - Result
 
-- Data Integration Efficiency: By automating ETL pipelines in Power Query (instead of manual consolidation), data preparation time reduced by ~52.7%.
-- Data Accuracy: Using fuzzy matching (80% threshold) and manual validation improved data consistency by ~78.3%, reducing mismatched player/team records.
-- Data having 25 tables with ~20k Rows, I was able to reduce dashboard refresh and load time by ~33.2% using  Performance Optimization techniques. 
-- Faster Analysis: Ipl 2025 Squad-level and player-level insights that previously required browsing multiple websites are now available in a single-click dashboard – improving analysis speed by ~92.6%.
-- Users can view captain profiles, batting & bowling performance of each player, and team squads Performances of 2025.
-- Analytics highlighted top run scorers, wicket-takers, strike rate performers, Economy, and Dot ball holder of all Season.
-- Pages included in Dashboar ( Overview (2008 - 2025), Points Table, Season 2025 Analysis, 2025 Squads )
+- Data Integration Efficiency: By **automating ETL pipelines** in Power Query (instead of manual consolidation), data preparation **time reduced by ~52.7%.**
+- Data Accuracy: Using **fuzzy matching** (0.8 threshold) and manual validation **improved data consistency by ~78.3%,** reducing mismatched player/team records.
+- Data having **25 tables with ~20k Rows**, I was able to reduce dashboard **refresh and loading time by ~33.2%** using  Performance Optimization techniques. 
+- Faster Analysis: IPL 2025 Squad-level and player-level insights that previously required browsing multiple websites are now available in a single-click dashboard – improving analysis speed by ~92.6%.
+- Users can view captain profiles, batting & bowling performance of each player, and team squads Performance of 2025.
+- Analytics highlighted top run scorers, wicket-takers, strike rate performers, Economy, and Dot ball holder of all Seasons.
+- Pages included in Dashboard ( Overview (2008 - 2025), Points Table, Season 2025 Analysis, 2025 Squads )
 
 </details>
 
@@ -120,7 +116,7 @@ $\textsf{\color{blue}{View Data Source ➡️}}$
 - Match Schedule & Points Table from IPL T20 | Indian Premier League Official Website [IPL](https://www.iplt20.com/)
 - Live Data (API) → CricAPI series info (matches, venues, squads) from
 [ESPN_CRIC_Info](https://www.espncricinfo.com/)
-- Other Data sets from Kaggle.
+- Other DataSets from Kaggle.
 
 </details>
 
@@ -296,7 +292,7 @@ $\textsf{\color{blue}{View Images ➡️}}$
 - Batting Stats Card – Runs, Innings, Strike Rate, High Score, 4s, 6s.
 - Bowling Stats Card – Wickets, Matches, Overs, Economy, BBI.
 
-> <a href="https://app.powerbi.com/view?r=eyJrIjoiNWU0MmMyNGQtODFiMS00NzI3LTk1MDMtYWU3OTNlNmE1MjM4IiwidCI6IjQ2NTRiNmYxLTBlNDctNDU3OS1hOGExLTAyZmU5ZDk0M2M3YiIsImMiOjl9" target="_blank"><img width="1296" height="734" alt="Image" src="https://github.com/user-attachments/assets/24890264-f62a-4fa8-a27f-e215074ffb6c" />
+> <a href="https://app.powerbi.com/view?r=eyJrIjoiNWU0MmMyNGQtODFiMS00NzI3LTk1MDMtYWU3OTNlNmE1MjM4IiwidCI6IjQ2NTRiNmYxLTBlNDctNDU3OS1hOGExLTAyZmU5ZDk0M2M3YiIsImMiOjl9" target="_blank"><img width="650" height="420" alt="Image" src="https://github.com/user-attachments/assets/24890264-f62a-4fa8-a27f-e215074ffb6c" />
 </a>
 
 > ### 2.Points Table page 
@@ -306,7 +302,7 @@ $\textsf{\color{blue}{View Images ➡️}}$
 - Season Filter – Slice the table & Match Schedule by season.
 - Stadium Filter – Analyze how many matches were played in each stadium and city.
 
-> <img width="1294" height="734" alt="Image" src="https://github.com/user-attachments/assets/764dd49d-c470-41f2-9ced-5b1cb45abf10" />
+> <img width="650" height="420" alt="Image" src="https://github.com/user-attachments/assets/764dd49d-c470-41f2-9ced-5b1cb45abf10" />
 
 > ### 3. Season 2025 page 
 
@@ -314,7 +310,7 @@ $\textsf{\color{blue}{View Images ➡️}}$
 - Records Dashboard – Displays top performers across all seasons, including runs, wickets, economy, sixes, and fours.
 - Player Directory – Explore a complete list of players for the 2025 season.
 
-> <img width="1306" height="737" alt="Image" src="https://github.com/user-attachments/assets/3404d63e-047b-46a9-ae4a-c3523e2fdce7" />
+> <img width="650" height="420" alt="Image" src="https://github.com/user-attachments/assets/3404d63e-047b-46a9-ae4a-c3523e2fdce7" />
 
 > ### 3. Squads Of 2025 Page
 
@@ -323,7 +319,7 @@ $\textsf{\color{blue}{View Images ➡️}}$
 - Captain Highlight – Captains are identified and highlighted for each squad.
 - Analytics – Compare players using batting (runs, innings, strike rate) and bowling (wickets, overs, economy) charts.
 
-> <img width="1298" height="742" alt="Image" src="https://github.com/user-attachments/assets/4f44a34f-e7a1-4ec4-9fc2-2ddd9a592c8a" />
+> <img width="650" height="420" alt="Image" src="https://github.com/user-attachments/assets/4f44a34f-e7a1-4ec4-9fc2-2ddd9a592c8a" />
 
 </details>
 
@@ -362,7 +358,7 @@ Example --> Season 2025:
 
 **👑 Squad Insights**
 
--  Highlight Squads 2025 :–  View all player squads with profile images and team logos.
+-  Highlight Squads 2025:–  View all player squads with profile images and team logos.
 - Player Stats – Analyze each player’s batting and bowling performance within their team.
 
 **Points Table**
@@ -371,7 +367,7 @@ Stadium Impact: Venue slicer analysis shows team performance varying strongly by
 
 </details>
 
-## Tools And Softwares
+## Tools And Software 
 <details>
 <summary>
 $\textsf{\color{blue}{View Tools ➡️}}$
